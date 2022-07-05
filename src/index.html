@@ -1,0 +1,29 @@
+<body id="body">
+  <!DOCTYPE html>
+  <html>
+      <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("p").hide();
+          });
+        });
+        </script>
+      </head>
+      <body>
+      <app-root></app-root>  
+      </body>
+
+</html> 
+<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig2">
+        <div ngxSlickItem *ngFor="let legislation of objLegislationList" class="slide">
+          <div class="descBox row-2">
+            <img
+              src="http://1.bp.blogspot.com/-Qy1y_Ur-_mE/TtxVJ86z2EI/AAAAAAAAAss/meLIad_uSfk/s1600/law-background-1-767326.jpg" />
+            <h3 onMouseOver="this.style.cursor='pointer'">{{legislation.Title}}</h3>
+            <p style="margin-bottom: 0;">Date : {{legislation.Date}}</p>
+            <p>Category {{legislation.CatName}}</p>
+          </div>
+        </div>
+      </ngx-slick-carousel>
